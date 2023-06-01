@@ -9,10 +9,10 @@ Parte fondamentale del programma è l'utente (`User`), composto da:
 - `friends (set)`: l'insieme degli amici
 - `hobbies (set[str])`: l'insieme degli hobby dell'utente (stringhe)
 
-Successivamente, implementare la classe `SocialNetwork` composta da un insieme di utente chiamato `users` e dai seguenti metodi:
+Successivamente, implementare la classe `SocialNetwork` composta da un insieme di utenti chiamato `users` e dai seguenti metodi:
 - `register_user(self, user: User)`: aggiunge l'utente al social network
-- `add_friend(self, user1: User, user2: User)`: viene scambiata l'amicizia tra i due utente (ricorda che l'amicizia è bidirezionale)
-- `remove_friend(self, user1: User, user2: User)`: viene **rimossa** l'amicizia tra i due utente (ricorda che l'amicizia è bidirezionale)
+- `add_friend(self, user1: User, user2: User)`: viene scambiata l'amicizia tra i due utenti (ricorda che l'amicizia è bidirezionale)
+- `remove_friend(self, user1: User, user2: User)`: viene **rimossa** l'amicizia tra i due utenti (ricorda che l'amicizia è bidirezionale)
   - `print_hobbies_counter(self)`: stampa, per ogni hobby, il numero complessivo di utenti a cui piace quel determinato hobby. Ad esempio:
     ```
     Cucina: 8
@@ -21,7 +21,7 @@ Successivamente, implementare la classe `SocialNetwork` composta da un insieme d
     ```
     **Extra**: esegui la stampa in ordine alfabetico.
 
-- `suggest_a_friend(self, user: User) -> User`: si cerchi l'utente con il numero maggiore di hobby in comune con lo user passato come parametro (attenzione, non devono essere già amici)
+- `suggest_a_friend(self, user: User) -> User`: si cerchi l'utente con il numero maggiore di hobby in comune con lo user passato come parametro (attenzione, non devono essere già amici e..?)
 
 ## RPN
 Una calcolatrice **R**everse **P**olish **N**otation è un (vero) tipo di calcolatrice che permette di computare operazioni matematiche senza l'uso di parentesi. 
@@ -45,7 +45,7 @@ Viene richiesto di completare la classe RPN con i seguenti metodi:
 - `sum(self) -> float`: esegue la somma tra gli ultimi due numeri inseriti in memoria (penultimo + ultimo), inserisce il risultato in memoria e ritorna il risultato. Se i numeri in memoria non sono sufficienti, sollevare un `ValueError`
 - `diff(self) -> float`: come sum ma con una sottrazione (penultimo - ultimo)
 - `mul(self) -> float`: come sum ma con una moltiplicazione (penultimo * ultimo)
-- `div(self) -> float`: come sum ma con una sottrazione (penultimo / ultimo). Se il secondo addendo è 0, sollevare un `ZeroDivisionError`
+- `div(self) -> float`: come sum ma con una sottrazione (penultimo / ultimo). Se il secondo addendo è 0.0, sollevare un `ZeroDivisionError`
 - `clear(self)`: svuota la memoria della calcolatrice
 
 Viene già implementato un main di collaudo con alcuni test automatici, **superare tutti i test non significa essere sicuri che il programma sia corretto al 100%**. Alla fine dei test, è possibile interagire con la calcolatrice inserendo numeri (utilizzare il "." per i decimali) ed effettuando operazioni.
@@ -61,9 +61,7 @@ Inoltre, completare i seguenti metodi:
 - `__str__(self) -> str`: ritorna la stringa nella forma `Team NAME (EXP)`
 - `__lt__(self, other) -> bool`: dove due team vengono confrontati per il livello di esperienza
 
-Successivamente, viene richiesto di completare la classe `Tournament`.
-
-La classe possiede un campo `teams` che rappresenta le squadre in gara. **Utilizza una coda per questo campo**.
+Successivamente, viene richiesto di completare la classe `Tournament`. La classe possiede un campo `teams` che rappresenta le squadre in gara. **Utilizza una coda per questo campo**.
 
 Inoltre, vengono richiesti i seguenti metodi:
 - `register_team(self, team: Team)`: il team viene aggiunto al torneo
